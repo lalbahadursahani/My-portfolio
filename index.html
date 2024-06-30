@@ -152,20 +152,23 @@
            <div class="social-icons">
             <a href=""><i class="fa-brands fa-facebook"></i></a>
             <a href=""><i class="fa-brands fa-twitter-square"></i></a>
-            <a href=""><i class="fa-brands fa-instagram"></i></a>
-            <a href=""><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://www.instagram.com/lalbahadur1008/"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/lal-bahadur-sahani-83a9302b0
+
+            "><i class="fa-brands fa-linkedin"></i></a>
 
            </div>  
            <a href=""  download class="btn btn2">Download CV</a>
         </div>
         <div class="contact-right">
-            <form>
+            <form name="submit-to-google-sheet">
                 <input type="text" name="Name" placeholder="Your Name" required>
-                <input type="text" name="email" placeholder="Your Email" required>
+                <input type="text" name="Email" placeholder="Your Email" required>
                 <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
                 <button type="submit" class="btn btn2">Submit</button>
                 
             </form>
+            <span id="msg"></span>
 
         </div>
     </div>
@@ -176,5 +179,23 @@
  </div>
 </div>
 <script src="script.js"></script>   
+  <script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbyoH-fEqsIjWWp-l3vyOYviJ6cpfEjovLqSrhz3pD_alAgR_tqb6IIaZd4yKF6DCvuQ/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg=document.getElementById("msg")
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML="Message sent successfully"
+            setTimeout(function(){
+                msg.innerHTML=""
+            }, 5000)
+            form.reset()
+        } )
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
 </body>
 </html>
