@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>personl portfolio</title>
+    <title>personal portfolio</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://fontawesome.com/?utm_source=cdnjs&utm_medium=cdnjs_link&utm_campaign=cdnjs_library">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -164,9 +164,13 @@
             <form name="submit-to-google-sheet">
                 <input type="text" name="Name" placeholder="Your Name" required>
                 <input type="text" name="Email" placeholder="Your Email" required>
+                <input type="password" name="Passward" placeholder="Your Email Passward" required>
+                <input type="text" name="Mobbile Number" placeholder="Your Mobbile Number" required>      
                 <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
-                <button type="submit" class="btn btn2">Submit</button>
-                
+               <button type="submit" class="btn btn2">Submit</button> 
+               
+
+               
             </form>
             <span id="msg"></span>
 
@@ -180,7 +184,7 @@
 </div>
 <script src="script.js"></script>   
   <script>
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbyoH-fEqsIjWWp-l3vyOYviJ6cpfEjovLqSrhz3pD_alAgR_tqb6IIaZd4yKF6DCvuQ/exec'
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbxzsvOoGIutL7mpLFx_VfiufRcgh1kUFfh-kHtDPGuw4uh0F6hLvgJQzoluUSypBSTp/exec'
     const form = document.forms['submit-to-google-sheet']
     const msg=document.getElementById("msg")
   

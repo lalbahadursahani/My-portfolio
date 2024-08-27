@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-   font-family: sans-serif "poppins";
+   font-family: sans-serif, 'poppins';
 
 }
 html{
@@ -381,7 +381,7 @@ form input,form textarea{
         
           }
           nav ul {
-            background: #ff004f;
+            background: #ff005176;
             position:fixed;
             top: 0;
             right: -200px;
@@ -435,12 +435,4 @@ form input,form textarea{
         display: block;
 
     }
-
-
-
-
-
-
-
-
-
+   
